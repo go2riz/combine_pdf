@@ -102,7 +102,7 @@ module CombinePDF
 					@scanner = StringScanner.new o[:raw_stream_content]
 					stream_data = _parse_
 					id_array = []
-					while stream_data[0].is_a? Fixnum
+					while stream_data[0].is_a? Integer
 						id_array << stream_data.shift
 						stream_data.shift
 					end

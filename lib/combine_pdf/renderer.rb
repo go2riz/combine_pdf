@@ -25,7 +25,7 @@ module CombinePDF
 				return format_name_to_pdf object
 			when object.is_a?(Array)
 				return format_array_to_pdf object
-			when object.is_a?(Fixnum), object.is_a?(Float), object.is_a?(TrueClass), object.is_a?(FalseClass)
+			when object.is_a?(Integer), object.is_a?(Float), object.is_a?(TrueClass), object.is_a?(FalseClass)
 				return object.to_s + " "
 			when object.is_a?(Hash)
 				return format_hash_to_pdf object
